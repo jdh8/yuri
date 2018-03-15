@@ -1,0 +1,24 @@
+{
+  "name": "knife-wife",
+  "version": "0.0.0",
+  "description": "Yuri-themed Discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owm111/knife-wife.git"
+  },
+  "author": "Owen McGrath",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/owm111/knife-wife/issues"
+  },
+  "homepage": "https://github.com/owm111/knife-wife#readme",
+  "dependencies": {
+    "common-tags": "^1.7.2",
+    "discord.js": "^11.3.2",
+    "discord.js-commando": "^0.9.0"
+  }
+}
