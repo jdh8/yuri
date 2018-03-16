@@ -4,7 +4,7 @@ const path = require('path')
 const {oneLine} = require('common-tags')
 
 const client = new Commando.Client({
-  commandPrefix: 'yuri',
+  commandPrefix: process.env.KNIFEWIFE_PREFIX || 'yuri',
   nonCommandEditable: false,
   unknownCommandResponse: false,
   owner: '212212754033934336'

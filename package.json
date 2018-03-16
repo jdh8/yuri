@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ."
+    "start": "node .",
+    "dev": "KNIFEWIFE_PREFIX='kw' nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,11 @@
     "discord.js": "^11.3.2",
     "discord.js-commando": "^0.9.0",
     "sqlite": "^2.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2"
+  },
+  "nodemonConfig": {
+    "ignore": ["node_modules"]
   }
 }
