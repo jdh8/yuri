@@ -60,5 +60,6 @@ client.setProvider(
 
 client.registry
   .registerDefaults()
+  .registerCommandsIn(path.join(__dirname, 'commands'))
 
 client.login(process.env.KNIFEWIFE_TOKEN)
