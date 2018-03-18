@@ -60,6 +60,9 @@ client.setProvider(
 
 client.registry
   .registerDefaults()
+  .registerGroups([
+    ['uncat', 'Uncategorized']
+  ])
   .registerCommandsIn(path.join(__dirname, 'commands'))
 
 client.login(process.env.KNIFEWIFE_TOKEN)
