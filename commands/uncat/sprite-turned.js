@@ -10,10 +10,15 @@ Jimp.prototype.getBufferAsync = util.promisify(Jimp.prototype.getBuffer)
 const faces = fs.readdirSync('assets/sprite/face-turned').map(face =>
   face.slice(0, -4)
 )
+
+const facesList = faces.map(face => `\`${face}\``).join(', ')
 // Removed since only one option
 // const poses = fs.readdirSync('assets/sprite/body-turned').map(pose =>
 //   pos.slice(0, -4)
 // )
+// const posesList = Object.getOwnPropertyNames(poses)
+//  .map(pose => `\`${post}\``)
+//  .join(', ')
 
 module.exports = class SpriteCommand extends Commando.Command {
   constructor (client) {
@@ -24,8 +29,11 @@ module.exports = class SpriteCommand extends Commando.Command {
       memberName: 'sprite-turned',
       description: 'Composites a shy Yuri sprite',
       details: stripIndent`
-        Valid faces: ${faces.map(face => `\`${face}\``).join(', ')}
+        Not all arguments are required when ran; prompts include valid options.
+        Valid faces: ${facesList}
+        Clothing options: \`casual\`/\`yes\` or \`uniform\`/\`school\`/\`no\`
       `,
+      examples: ['yuri sprite-shy', 'yuri sprite-shy smile casual'],
       args: [
         {
           key: 'face',
@@ -33,6 +41,7 @@ module.exports = class SpriteCommand extends Commando.Command {
             What should my expression be?
             Valid faces: ${faces.map(face => `\`${face}\``).join(', ')}
           `,
+          label: 'expression',
           type: 'string',
           validate: value => faces.indexOf(value.toLowerCase()) >= 0,
           parse: value => value.toLowerCase()
@@ -56,6 +65,7 @@ module.exports = class SpriteCommand extends Commando.Command {
         {
           key: 'casual',
           prompt: 'Should I wear my casual clothes?\n(`yes` for casual)',
+          label: 'clothing option',
           type: 'string',
           validate: value => /yes|cas|casual|no|school|uniform/i.test(value),
           parse: value => /yes|casual|cas/i.test(value)

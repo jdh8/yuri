@@ -16,6 +16,11 @@ const poses = {
   both: ['hand', 'hand']
 }
 
+const facesList = faces.map(face => `\`${face}\``).join(', ')
+const posesList = Object.getOwnPropertyNames(poses)
+  .map(pose => `\`${pose}\``)
+  .join(', ')
+
 module.exports = class SpriteCommand extends Commando.Command {
   constructor (client) {
     super(client, {
@@ -24,20 +29,20 @@ module.exports = class SpriteCommand extends Commando.Command {
       memberName: 'sprite',
       description: 'Composites a Yuri sprite',
       details: stripIndent`
-        Valid faces: ${faces.map(face => `\`${face}\``).join(', ')}
-        Valid hand positions: ${
-          Object.getOwnPropertyNames(poses)
-            .map(pose => `\`${pose}\``)
-            .join(', ')
-        }
+        Not all arguments are required when ran; prompts include valid options.
+        Valid faces: ${facesList}
+        Valid hand positions: ${posesList}
+        Clothing options: \`casual\`/\`yes\` or \`uniform\`/\`school\`/\`no\`
       `,
+      examples: ['yuri sprite', 'yuri sprite happy both casual'],
       args: [
         {
           key: 'face',
           prompt: stripIndent`
             What should my expression be?
-            Valid faces: ${faces.map(face => `\`${face}\``).join(', ')}
+            Valid faces: ${facesList}
           `,
+          label: 'expression',
           type: 'string',
           validate: value => faces.indexOf(value.toLowerCase()) >= 0,
           parse: value => value.toLowerCase()
@@ -46,11 +51,7 @@ module.exports = class SpriteCommand extends Commando.Command {
           key: 'pose',
           prompt: stripIndent`
             How should I have hands?
-            Valid hand positions: ${
-              Object.getOwnPropertyNames(poses)
-                .map(pose => `\`${pose}\``)
-                .join(', ')
-            }
+            Valid hand positions: ${posesList}
           `,
           label: 'hand position',
           type: 'string',
@@ -60,6 +61,7 @@ module.exports = class SpriteCommand extends Commando.Command {
         {
           key: 'casual',
           prompt: 'Should I wear my casual clothes?\n(`yes` for casual)',
+          label: 'clothing option',
           type: 'string',
           validate: value => /yes|cas|casual|no|school|uniform/i.test(value),
           parse: value => /yes|casual|cas/i.test(value)
