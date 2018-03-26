@@ -6,11 +6,12 @@ module.exports = class InviteCommand extends Commando.Command {
     super(client, {
       name: 'invite',
       aliases: ['invite-link'],
-      group: 'uncat',
+      group: 'util',
       memberName: 'invite',
       description: 'Generates an invite link for KnifeWife'
     })
   }
+  // TODO: remake this using Client#generateInvite
   async run (message, args) {
     return message.reply(stripIndent`
       here is your invite link:

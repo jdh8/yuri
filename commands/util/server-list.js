@@ -5,7 +5,7 @@ module.exports = class ServerListCommand extends Commando.Command {
   constructor (client) {
     super(client, {
       name: 'server-list',
-      group: 'uncat',
+      group: 'util',
       memberName: 'server-list',
       description: 'Lists all server Knife-Wife is apart of',
       ownerOnly: true
