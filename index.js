@@ -62,6 +62,7 @@ client.registry
   .registerDefaults()
   .registerGroups([
     ['greet', 'Greeting Commands'],
+    ['fun', 'Fun Commands'],
     ['uncat', 'Uncategorized']
   ])
   .registerCommandsIn(path.join(__dirname, 'commands'))

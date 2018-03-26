@@ -1,11 +1,11 @@
 const Commando = require('discord.js-commando')
 const {oneLine} = require('common-tags')
 
-module.exports = class NutCommand extends Commando.Command {
+module.exports = class extends Commando.Command {
   constructor (client) {
     super(client, {
       name: 'nut',
-      group: 'uncat',
+      group: 'fun',
       memberName: 'nut',
       description: 'Nut on someone or something',
       details: 'If the object starts with "in", that will replace "on"',

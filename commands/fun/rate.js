@@ -7,19 +7,19 @@ const rigs = {
   knives: 10
 }
 
-module.exports = class RateCommand extends Commando.Command {
+module.exports = class extends Commando.Command {
   constructor (client) {
     super(client, {
       name: 'rate',
-      group: 'uncat',
+      group: 'fun',
       memberName: 'rate',
       description: 'Rates something out of 10',
-      examples: ['yuri rate @users', 'yuri rate knives'],
+      examples: ['yuri rate @user', 'yuri rate knives'],
       args: [
         {
           key: 'toRate',
           label: 'object',
-          prompt: 'What would you like to rate?',
+          prompt: 'What would you like me to rate?',
           type: 'string'
         }
       ]

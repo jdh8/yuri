@@ -1,14 +1,15 @@
 const Commando = require('discord.js-commando')
 
-module.exports = class HnngCommand extends Commando.Command {
+module.exports = class extends Commando.Command {
   constructor (client) {
     super(client, {
       name: 'hnng',
-      group: 'uncat',
+      group: 'fun',
       memberName: 'hnng',
       description: '*HNNNNNG*',
+      example: ['*HNNG*'],
       defaultHandling: false,
-      patterns: [/^[*`]*h+n+g+[*`]*/i]
+      patterns: [/^[*`~_]*h+n+g+[*`~_]*|[*`~_]*h+n+g+[*`~_]*$/im]
     })
   }
   async run (message, args) {
@@ -16,7 +17,7 @@ module.exports = class HnngCommand extends Commando.Command {
       image: {
         url: 'https://cdn.discordapp.com/attachments/403299886352695297/424809981066608640/hnng.gif'
       },
-      color: 9961727
+      color: 0x9800FF
     }})
   }
 }
