@@ -61,6 +61,7 @@ client.setProvider(
 client.registry
   .registerDefaults()
   .registerGroups([
+    ['greet', 'Greeting Commands'],
     ['uncat', 'Uncategorized']
   ])
   .registerCommandsIn(path.join(__dirname, 'commands'))

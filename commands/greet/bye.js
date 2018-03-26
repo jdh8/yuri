@@ -1,39 +1,38 @@
 const Commando = require('discord.js-commando')
 const {oneLine} = require('common-tags')
 
-module.exports = class GoodMorningCommand extends Commando.Command {
+module.exports = class extends Commando.Command {
   constructor (client) {
     super(client, {
-      name: 'good-morning',
-      aliases: ['gm'],
-      group: 'uncat',
-      memberName: 'good-morning',
-      description: oneLine`
-        Say good morning to Yuri or have Yuri say good morning to someone
-      `,
+      name: 'bye',
+      aliases: ['good-bye', 'cya', 'see-ya'],
+      group: 'greet',
+      memberName: 'bye',
+      description: 'Say bye to Yuri or have Yuri say bye to someone',
       details: oneLine`
-        If there is no one mentioned, Yuri will say good morning user.
+        If there is no one mentioned, Yuri will say good bye user.
         If someone (user, bot, role, everyone or here) is mentioned, Yuri will
-        say good morning them.
+        say good bye them.
       `,
-      examples: ['yuri good-morning', 'yuri gm @user', 'Good morning Yuri!'],
+      examples: ['yuri bye', 'yuri cya @user', 'Good bye Yuri!'],
       args: [
         {
           key: 'mention',
-          prompt: 'Who would you like me to say good morning to?',
+          prompt: 'Who would you like me to say bye to?',
           type: 'string',
           validate: mention => /<@[&!]?\d+>|@here|@everyone/.test(mention),
           default: message => message.author.toString()
         }
       ],
+      argsPromptLimit: 1,
       patterns: [new RegExp(oneLine`
-        ((good[- ]?)?morning|gm)
+        ((good[- ]?)?bye|cya|see[- ]?ya|ttyl)
         (yuri|<@407652636054257665>)
       `)]
     })
   }
   async run (message, args) {
-    const response = 'Good morning'
+    const response = 'Good bye'
     message.channel.send(oneLine`
       ${response}
       ${args.mention || message.author.toString()}!

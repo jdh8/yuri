@@ -1,34 +1,36 @@
 const Commando = require('discord.js-commando')
 const {oneLine} = require('common-tags')
 
-module.exports = class HiCommand extends Commando.Command {
+module.exports = class extends Commando.Command {
   constructor (client) {
     super(client, {
-      name: 'hi',
-      aliases: ['hello', 'greet'],
-      group: 'uncat',
-      memberName: 'hi',
-      description: 'Say hi to Yuri or have Yuri say hi to someone',
-      details: oneLine`
-        If there is no one mentioned, Yuri will greet user.
-        If someone (user, bot, role, everyone or here) is mentioned, Yuri will
-        greet them.
+      name: 'welcome-back',
+      aliases: ['wb'],
+      group: 'greet',
+      memberName: 'welcome-back',
+      description: oneLine`
+        Have Yuri say good night to someone
       `,
-      examples: ['yuri hi', 'yuri greet @user', 'Hi Yuri!'],
+      details: oneLine`
+        If there is no one mentioned, Yuri will say welcome back user.
+        If someone (user, bot, role, everyone or here) is mentioned, Yuri will
+        say welcome back them.
+      `,
+      examples: ['yuri welcome-back @user'],
       args: [
         {
           key: 'mention',
-          prompt: 'Who would you like me to say hi to?',
+          prompt: 'Who would you like me to say welcome back to?',
           type: 'string',
           validate: mention => /<@[&!]?\d+>|@here|@everyone/.test(mention),
           default: message => message.author.toString()
         }
       ],
-      patterns: [new RegExp(`(hi|he[nl]lo|heyo?) (yuri|<@407652636054257665>)`)]
+      argsPromptLimit: 1
     })
   }
   async run (message, args) {
-    const response = 'Hi'
+    const response = 'Welcome back'
     message.channel.send(oneLine`
       ${response}
       ${args.mention || message.author.toString()}!
