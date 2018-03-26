@@ -1,23 +1,24 @@
 const Commando = require('discord.js-commando')
 const {oneLine, stripIndent} = require('common-tags')
 
-module.exports = class ChangeProfilePicCommand extends Commando.Command {
+module.exports = class extends Commando.Command {
   constructor (client) {
     super(client, {
       name: 'set-game',
-      aliases: ['change-game', 'chgame'],
-      group: 'uncat',
-      memberName: 'change-game',
-      description: 'Chanes the bot\'s game status',
+      aliases: ['chgame'],
+      group: 'util',
+      memberName: 'set-game',
+      description: 'Changes the Yuri\'s game status',
       ownerOnly: true,
       args: [
         {
           key: 'game',
-          prompt: 'What would you like to set the bot\'s game to?',
+          prompt: 'What would you like to set my game to?',
           type: 'string',
           default: ''
         }
-      ]
+      ],
+      argsPrmoptLimit: 1
     })
   }
   async run (message, args) {

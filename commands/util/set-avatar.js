@@ -1,22 +1,23 @@
 const Commando = require('discord.js-commando')
 const {stripIndent} = require('common-tags')
 
-module.exports = class ChangeProfilePicCommand extends Commando.Command {
+module.exports = class extends Commando.Command {
   constructor (client) {
     super(client, {
       name: 'set-avatar',
-      aliases: ['change-avatar', 'set-pfp', 'chavatar', 'chpfp'],
-      group: 'uncat',
-      memberName: 'change-profile-pic',
-      description: 'Chanes the bot\'s profile picture to a given URL',
+      aliases: ['chavatar', 'chpfp'],
+      group: 'util',
+      memberName: 'set-avatar',
+      description: 'Changes the Yuri\'s profile picture to a given URL',
       ownerOnly: true,
       args: [
         {
           key: 'pic',
-          prompt: 'What would you like to set the avatar to?',
+          prompt: 'What would you like to set my avatar to?',
           type: 'string'
         }
-      ]
+      ],
+      argsPrmoptLimit: 1
     })
   }
   async run (message, args) {
