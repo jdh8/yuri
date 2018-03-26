@@ -59,12 +59,12 @@ client.setProvider(
 ).catch(console.error)
 
 client.registry
-  .registerDefaults()
   .registerGroups([
     ['greet', 'Greeting Commands'],
     ['fun', 'Fun Commands'],
     ['uncat', 'Uncategorized']
   ])
+  .registerDefaults()
   .registerCommandsIn(path.join(__dirname, 'commands'))
 
 client.login(process.env.KNIFEWIFE_TOKEN)
