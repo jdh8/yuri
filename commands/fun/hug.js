@@ -13,7 +13,7 @@ module.exports = class extends Commando.Command {
         {
           key: 'person',
           label: 'mention',
-          prompt: 'What would you like to hug on? (mention one or more users)',
+          prompt: 'Who would you like to hug? (mention one or more users)',
           type: 'string',
           validate: person => /^((<@[!&]?\d+>|@everyone|@here)\s*)+$/.test(person),
           parse: person => person.replace(/\s/g, ',').split(',')
