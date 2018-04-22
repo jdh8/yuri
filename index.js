@@ -62,6 +62,7 @@ client.registry
   .registerGroups([
     ['greet', 'Greeting Commands'],
     ['fun', 'Fun Commands'],
+    ['tools', 'Useful Commands'],
     ['uncat', 'Uncategorized']
   ])
   .registerDefaults()
