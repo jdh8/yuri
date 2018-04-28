@@ -63,6 +63,7 @@ client.registry
     ['greet', 'Greeting Commands'],
     ['fun', 'Fun Commands'],
     ['tools', 'Useful Commands'],
+    ['sprite', 'Sprite Commands'],
     ['uncat', 'Uncategorized']
   ])
   .registerDefaults()
