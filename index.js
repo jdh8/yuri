@@ -3,9 +3,7 @@ const commands = require('./commands')
 
 const client = new KwClient({
 })
-  .on('ready', () => {
-    console.log('Ready!')
-  })
+client.addDefaultEvents()
 client.addDefaultCommands()
 client.addCommands(commands)
 
