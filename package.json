@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/owm111/knife-wife#readme",
   "dependencies": {
+    "chalk": "^2.4.1",
     "discord.js": "^11.3.2"
   },
   "devDependencies": {
