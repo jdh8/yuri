@@ -2,8 +2,8 @@ const {KwClient} = require('./lib/client')
 const commands = require('./commands')
 
 const client = new KwClient()
-client.addDefaultGroups()
 client.addDefaultEvents()
+client.addDefaultGroups()
 client.addDefaultCommands()
 client.addGroups([
   ['interjections', 'Interjections', '*Hnnnnng*'],
