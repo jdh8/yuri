@@ -1,4 +1,4 @@
-const {KwClient} = require('./lib/client')
+const {KwClient} = require('./lib')
 const commands = require('./commands')
 
 const client = new KwClient()
