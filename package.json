@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node .",
-    "dev": "KNIFEWIFE_PREFIX='kw' nodemon index.js"
+    "dev": "KNIFEWIFE_PREFIX='kw' nodemon index.js",
+    "docs": "jsdoc lib README.md -c jsdoc.js -R README.md -d docs"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@citycide/cz-conventional": "^1.0.0",
     "commitizen": "^2.9.6",
+    "jsdoc": "^3.5.5",
     "nodemon": "^1.17.2"
   },
   "nodemonConfig": {
