@@ -2,11 +2,11 @@ const {KwClient} = require('./lib')
 const commands = require('./commands')
 
 const client = new KwClient()
-client.addDefault()
-client.addGroups([
+client.addDefaults()
+client.commands.groups.add([
   ['interjections', 'Interjections', '*Hnnnnng*'],
   ['test', 'Test', '`test`']
 ])
-client.addCommands(commands)
+client.commands.add(commands)
 
 client.login(process.env.KNIFEWIFE_TOKEN)
