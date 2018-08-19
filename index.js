@@ -11,7 +11,6 @@ const client = new KwClient({
     repo: 'https://github.com/owm111/knife-wife'
   }
 })
-client.addDefaults()
 client.commands.groups.add([
   ['interjections', 'Interjections', '*Hnnnnng*'],
   ['test', 'Test', '`test`']
