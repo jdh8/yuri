@@ -11,7 +11,7 @@ const client = new KwClient({
     repo: 'https://github.com/owm111/knife-wife'
   }
 })
-client.commands.groups.add([
+client.groups.add([
   ['interjections', 'Interjections', '*Hnnnnng*'],
   ['test', 'Test', '`test`']
 ])
