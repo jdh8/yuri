@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node .",
-    "dev": "KNIFEWIFE_PREFIX='kw' nodemon index.js",
+    "start": "node --experimental-modules index.mjs",
+    "dev": "KNIFEWIFE_PREFIX='kw' nodemon -- --experimental-modules index.mjs ",
     "docs": "jsdoc lib README.md -c jsdoc.js -R README.md -d docs"
   },
   "repository": {
