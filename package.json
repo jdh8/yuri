@@ -22,7 +22,9 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "common-tags": "^1.8.0",
-    "discord.js": "^11.3.2"
+    "discord.js": "^11.3.2",
+    "google-translate-api": "^2.3.0",
+    "jimp": "^0.3.9"
   },
   "devDependencies": {
     "@citycide/cz-conventional": "^1.0.0",
