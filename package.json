@@ -4,8 +4,8 @@
   "description": "Yuri-themed Discord bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --experimental-modules index.mjs",
+    "test": "ava",
     "dev": "KNIFEWIFE_PREFIX='kw' nodemon -- --experimental-modules index.mjs ",
     "predocs": "npm run docs:clean",
     "docs": "jsdoc lib/index.mjs -c jsdoc.js",
@@ -32,7 +32,9 @@
   },
   "devDependencies": {
     "@citycide/cz-conventional": "^1.0.0",
+    "ava": "^1.0.0-beta.8",
     "commitizen": "^2.9.6",
+    "esm": "^3.0.82",
     "jsdoc": "^3.5.5",
     "nodemon": "^1.17.2"
   },
@@ -45,5 +47,22 @@
     "commitizen": {
       "path": "./node_modules/@citycide/cz-conventional"
     }
+  },
+  "ava": {
+    "files": [
+      "spec/**/*.js",
+      "!_*.js"
+    ],
+    "sources": [
+      "lib/**/*.{js,mjs}"
+    ],
+    "extentions": [
+      "js",
+      "mjs"
+    ],
+    "require": [
+      "esm"
+    ],
+    "babel": false
   }
 }
