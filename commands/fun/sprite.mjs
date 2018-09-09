@@ -32,6 +32,8 @@ export default {
     **Mouth:** ${list(mouthSprites)}
     **Poses:** ${list(poses)}
     **Outfits:** \`casual\`/\`cas\`/\`yes\` or \`uniform\`/\`no\`
+
+    *Shy sprite will be added back in a future update!*
   `,
   usage: '<eyes sprite> <mouth sprite> <pose> <outfit>',
   examples: [

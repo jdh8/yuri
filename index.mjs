@@ -10,8 +10,8 @@ const client = new KwClient({
     disableDefaults: ['ping']
   },
   info: {
-    name: 'KnifeWife',
-    desc: 'A Yuri-themed Discord bot; Currently in public beta!',
+    name: 'Yuri',
+    desc: 'A Yuri-themed Discord bot. Currently in public beta! Please join the support server for information about future updates!',
     version: '1.0.0-beta.1',
     developer: 'owm#1337',
     owner: '212212754033934336',

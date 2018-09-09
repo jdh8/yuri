@@ -10,7 +10,7 @@ export default {
       type: 'user'
     }
   ],
-  desc: 'Greets a user',
+  desc: 'Greets a user\n\n*Other greets will be added in a future update!*',
   examples: [
     ['', 'Greets you'],
     ['@user', 'Greets @user'],
