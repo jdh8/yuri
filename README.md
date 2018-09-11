@@ -107,6 +107,8 @@ Name | Function
 ### Contributing
 You want to help out making Yuri best bot? Great! You can do this by submitting pull requests and issues, make sure you use the commit style and linter as the rest of the project! **A more detailed guide will come in the future.**
 
+You can help the development of the framework out by answering [this question](https://stackoverflow.com/questions/51637856/cannot-find-postgresql-files-clusters-or-service-what-to-do).
+
 ### Framework
 Yuri is built on her own framework, which will eventually split into its own repo/package so anyone can use it!
 The framework is contained withing the `lib/` directory so you can check it out. 
