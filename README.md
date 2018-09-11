@@ -5,7 +5,7 @@
 
 > **Hey there!** This bot is currently in public beta, so it may be lacking in features, but do not worry, as it is being actively developed! Check out the [to do section](#to-do-list) of this file to see what is coming, and send in an issue or pull request to help with adding content and fixing bugs!
 
-Yuri is a multi-purpose Discord bot, based off the character Yuri from *The Doki Doki Literature Club!*, she aims to have useful and high-quality commands to make your server better. Her current list of features is... not much (as mentioned above)... but Yuri is currently reading up on how to be a great Discord bot, so expect a lot more to come!
+Yuri is a multi-purpose Discord bot, based off the character Yuri from *Doki Doki Literature Club!*, she aims to have useful and high-quality commands to make your server better. Her current list of features is... not much (as mentioned above)... but Yuri is currently reading up on how to be a great Discord bot, so expect a lot more to come!
 
 Currently, here is what Yuri can do for you...
 
@@ -115,4 +115,6 @@ The framework is contained withing the `lib/` directory so you can check it out.
 ## License
 yuri-bot is under the [MIT license](https://owm.mit-license.org/)
 
-*The Doki Doki Literature Club!* is © of Team Salvato. All artwork used is © of their respective artsts.
+*Doki Doki Literature Club!* is copyright of Team Salvato. All artwork used is copywrite of their respective artists.
+
+If any artists would like their copyrighted material to be removed, please contact the bot developer (see the LICENSE for contact info).
