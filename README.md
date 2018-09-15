@@ -62,7 +62,7 @@ A full command list, along with help for each, might be added to this file in th
 
 If you need help with any part of you usage of Yuri, feel free to join our support server and ask us there!
 
-[![Join the server](https://github.com/owm111/yuri/blob/master/assets/btn-server.png](https://discord.gg/PEgCkej)
+[![Join the server](https://github.com/owm111/yuri/blob/master/assets/btn-server.png)](https://discord.gg/PEgCkej)
 
 Talk there doesn't *need* to be about getting help, just joining to talk with others is perfectly fine! Let's build a community!
 
