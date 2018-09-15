@@ -1,5 +1,5 @@
 # Yuri
-<img src="assets/avatar-circle-200.png" align="right" title="H-hi there, my name is Yuri"/>
+<img src="https://raw.githubusercontent.com/owm111/yuri/master/assets/avatar-circle-200.png" align="right" title="H-hi there, my name is Yuri"/>
 
 > A Discord bot
 
@@ -34,7 +34,7 @@ You can also check out the [roadmap](https://github.com/owm111/knife-wife/projec
 ## Invite Link
 > Get Yuri in your server!
 
-[![Invite Yuri!](assets/btn-invite.png)](https://discordapp.com/oauth2/authorize?&client_id=407652636054257665&scope=bot)
+[![Invite Yuri!](https://raw.githubusercontent.com/owm111/yuri/master/assets/btn-invite.png)](https://discordapp.com/oauth2/authorize?&client_id=407652636054257665&scope=bot)
 
 Another useful link is to the [support server](#support) (more details below)
 
@@ -62,7 +62,7 @@ A full command list, along with help for each, might be added to this file in th
 
 If you need help with any part of you usage of Yuri, feel free to join our support server and ask us there!
 
-[![Join the server](assets/btn-server.png)](https://discord.gg/PEgCkej)
+[![Join the server](https://github.com/owm111/yuri/blob/master/assets/btn-server.png](https://discord.gg/PEgCkej)
 
 Talk there doesn't *need* to be about getting help, just joining to talk with others is perfectly fine! Let's build a community!
 
