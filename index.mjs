@@ -16,7 +16,7 @@ const client = new KwClient({
     developer: 'owm#1337',
     owner: '212212754033934336',
     repo: 'https://github.com/owm111/knife-wife',
-    invite: 'https://discord.gg/hb2MYX7'
+    invite: 'https://discord.gg/PEgCkej'
   }
 })
 client.addGroups([
