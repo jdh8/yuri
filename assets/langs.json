@@ -90,22 +90,24 @@
     ],
     "flag": "zw"
   },
-  "zh-cn": [
-    {
-      "alias": [
-        "zh-cn",
-        "chinese-simplified"
-      ],
-      "flag": "cn"
-    },
-    {
-      "alias": [
-        "zh-tw",
-        "chinese-traditional"
-      ],
-      "flag": "cn"
-    }
-  ],
+  "zh": {
+    "alias": [
+      "zh",
+      "zh-cn",
+      "zh-hans",
+      "chinese",
+      "chinese-simplified"
+    ],
+    "flag": "cn"
+  },
+  "zh-tw": {
+    "alias": [
+      "zh-tw",
+      "zh-hant",
+      "chinese-traditional"
+    ],
+    "flag": "tw"
+  },
   "co": {
     "alias": [
       "co",
