@@ -1,12 +1,17 @@
 {
   "name": "knife-wife",
-  "version": "0.0.0",
+  "version": "1.0.0-beta.1",
   "description": "Yuri-themed Discord bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node .",
-    "dev": "KNIFEWIFE_PREFIX='kw' nodemon index.js"
+    "start": "node --experimental-modules index.mjs",
+    "test": "ava",
+    "dev": "nodemon -- --experimental-modules index.mjs ",
+    "predocs": "npm run docs:clean",
+    "docs": "jsdoc lib/index.mjs -c jsdoc.js",
+    "docs:clean": "rm -rf docs/*",
+    "predocs:dev": "npm run docs",
+    "docs:dev": "http-server docs"
   },
   "repository": {
     "type": "git",
@@ -19,19 +24,18 @@
   },
   "homepage": "https://github.com/owm111/knife-wife#readme",
   "dependencies": {
-    "common-tags": "^1.7.2",
-    "discord.js": "github:discordjs/discord.js",
-    "discord.js-commando": "github:discordjs/Commando",
+    "chalk": "^2.4.1",
+    "common-tags": "^1.8.0",
+    "discord.js": "^11.3.2",
     "google-translate-api": "^2.3.0",
-    "japanese": "^1.2.0",
-    "jimp": "^0.2.28",
-    "kpop": "^0.1.2",
-    "seed-random": "^2.2.0",
-    "sqlite": "^2.9.1"
+    "jimp": "^0.3.9"
   },
   "devDependencies": {
     "@citycide/cz-conventional": "^1.0.0",
+    "ava": "^1.0.0-beta.8",
     "commitizen": "^2.9.6",
+    "esm": "^3.0.82",
+    "jsdoc": "^3.5.5",
     "nodemon": "^1.17.2"
   },
   "nodemonConfig": {
@@ -43,5 +47,22 @@
     "commitizen": {
       "path": "./node_modules/@citycide/cz-conventional"
     }
+  },
+  "ava": {
+    "files": [
+      "spec/**/*.js",
+      "!_*.js"
+    ],
+    "sources": [
+      "lib/**/*.{js,mjs}"
+    ],
+    "extentions": [
+      "js",
+      "mjs"
+    ],
+    "require": [
+      "esm"
+    ],
+    "babel": false
   }
 }
